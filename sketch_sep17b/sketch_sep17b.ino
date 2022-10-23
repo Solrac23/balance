@@ -4,12 +4,9 @@
 #include <math.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include "Leds/Leds.h"
 Adafruit_SSD1306 display = Adafruit_SSD1306(); //objeto tipo Adafruit_SSD1306
-
-
-#define ledVerde 2
-#define ledAmarelo 3
-#define ledVermelho 4
+Leds led(2,3,4);
 
 struct variables {
   int numVermelho;
@@ -18,9 +15,6 @@ struct variables {
 };
 
 void setup(){
-pinMode(ledVerde, OUTPUT);
-pinMode(ledAmarelo, OUTPUT);
-pinMode(ledVermelho, OUTPUT);
 Wire.begin(); //inicia com a biblioteca
 display.begin(SSD1306_SWITCHCAPVCC, 0x3C); //inicia o display com endereço I2C 0x3C
 display.setTextColor(WHITE); //define cor 
@@ -42,54 +36,4 @@ void loop() {
    delay(1000); //intervalo de 1 segundo
    display.clearDisplay(); //limpa o texto do display
 
-}
-
-
-// Função para ligar leds
-int turnOnLeds(int val){
-  
-  if(val <= 0){
-    digitalWrite(ledVermelho, HIGH);
-    digitalWrite(ledAmarelo, LOW);
-    digitalWrite(ledVerde, LOW);
-    delay(5000);
-   
-    return 0;
-  }
-  
-  if(val >= 0 && val <= 39){
-   digitalWrite(ledVermelho, HIGH);
-   digitalWrite(ledAmarelo, LOW);
-   digitalWrite(ledVerde, LOW);
-   delay(5000);
-   
-   return val;
-  }else if(val >= 40 && val <= 79){
-    digitalWrite(ledVermelho, LOW);
-    digitalWrite(ledAmarelo, HIGH);
-    digitalWrite(ledVerde, LOW);
-    delay(5000);
-   
-    return val;
-  }else if(val >= 80 && val <= 100){
-    digitalWrite(ledVermelho, LOW);
-    digitalWrite(ledAmarelo, LOW);
-    digitalWrite(ledVerde, HIGH);
-    delay(5000);
-   
-    return val;
-  }
- 
-
-}
-
-// Função de porcentagem
-int percents(int val){
-  int var; 
-  int varFormated;
-  
-  var = val / 0.28;
-  varFormated = floor(var);
-
-  return turnOnLeds(varFormated);   
 }
