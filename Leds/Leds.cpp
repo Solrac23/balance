@@ -1,8 +1,12 @@
 #include "Leds.h"
 #include <math.h>
 
-Leds::Leds(int &valG, int &valY, int &valR){
-	pindMode(valG, OUTPUT);
+Leds::Leds(){
+}
+
+// Função para ligar leds
+void Leds::begin(int &valR, int &valG, int &valY){
+  pindMode(valG, OUTPUT);
 	pindMode(valY, OUTPUT);
 	pindMode(valR, OUTPUT);
 	ledGreen = valG;
