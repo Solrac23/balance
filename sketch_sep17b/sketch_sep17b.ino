@@ -1,13 +1,11 @@
 //inclusao das bibliotecas necessarias
 #include <Wire.h>
 #include <stdio.h>
-#include <math.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-#include "Leds/Leds.h"
+#include <Leds/Leds.h>
 Adafruit_SSD1306 display = Adafruit_SSD1306(); //objeto tipo Adafruit_SSD1306
-Leds led(2,3,4);
-
+Leds led(2,3,4)
 struct variables {
   int numVermelho;
   int numAmarelo;
@@ -30,7 +28,7 @@ void loop() {
   s1.numVermelho = 8;
 
    display.setCursor(55,10); //posição do texto no display
-   display.print(percents(s1.numVermelho)); //escreve o texto no display
+   display.print(led.percents(s1.numVermelho)); //escreve o texto no display
    display.print("%"); //acrescentando o simbolo de % ao nuermo
    display.display(); //permite a mudança de texto no display
    delay(1000); //intervalo de 1 segundo
