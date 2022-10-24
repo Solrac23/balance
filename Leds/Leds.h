@@ -9,7 +9,7 @@
 #include <Arduino.h>
 class Leds{
   public:
-    Leds() = default;
+    Leds() = default; // constructor definido como padrão
     virtual ~Leds();
 
     // Initialize the library and data to turn on the LED

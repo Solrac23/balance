@@ -1,6 +1,7 @@
 #include "Leds.h"
 #include <math.h>
 
+// Inicializando a classe.
 Leds::Leds(){
 }
 
