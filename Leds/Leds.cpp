@@ -6,7 +6,6 @@ Leds::Leds(){
 }
 
 Leds::~Leds(){
-  
 }
 
 // Função para ligar leds
