@@ -5,6 +5,10 @@
 Leds::Leds(){
 }
 
+Leds::~Leds(){
+  
+}
+
 // Função para ligar leds
 void Leds::begin(int &valR, int &valG, int &valY){
   pindMode(valG, OUTPUT);
