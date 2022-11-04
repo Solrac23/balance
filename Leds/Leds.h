@@ -17,7 +17,7 @@ class Leds{
 
     // Calculete the percents to LED and turn on the LED
     // according to the values
-    int percents(int val, float weight);
+    float percents(float val, float weight);
 
     // Conditions to turn on the LED
     float turnOnLeds(float val);
