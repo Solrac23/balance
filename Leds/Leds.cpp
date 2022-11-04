@@ -1,4 +1,5 @@
 #include "Leds.h"
+#include "Arduino.h"
 #include <math.h>
 
 // Inicializando a classe.
