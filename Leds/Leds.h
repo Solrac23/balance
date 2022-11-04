@@ -20,7 +20,7 @@ class Leds{
     int percents(int val, float weight);
 
     // Conditions to turn on the LED
-    int turnOnLeds(int val);
+    float turnOnLeds(float val);
 
   private:
     const int ledRed; // variable to store the red value
