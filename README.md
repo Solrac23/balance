@@ -22,4 +22,9 @@ ________________________________________________________________
 	Pega os 3 arquivo citados acima, coloca dentro de uma pasta do mesmo nome, 
 	por exemplo: Leds
 	Em seguida encontre o diretorio da pasta Arduino e econtre o diretorio libraries
+
+### linux:
 <img src="./doc/path_directory.png" alt="Caminho para instalacao"/>
+
+### Windows:
+ <code>C:\Users\<Seu User>\Documents\Arduino\libraries</code>
