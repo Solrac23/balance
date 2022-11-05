@@ -10,23 +10,23 @@ Leds::~Leds(){
 }
 
 // Função para ligar leds
-void Leds::begin(int &valR, int &valG, int &valY){
-  pindMode(valG, OUTPUT);
-	pindMode(valY, OUTPUT);
-	pindMode(valR, OUTPUT);
+void Leds::begin(int valR, int valG, int valY){
+  pinMode(valG, OUTPUT);
+	pinMode(valY, OUTPUT);
+	pinMode(valR, OUTPUT);
 	ledGreen = valG;
 	ledYellow = valY;
 	ledRed = valR;
 }
 
 // Função para ligar leds
-int Leds::turnOnLeds(int val){
+float Leds::turnOnLeds(float val){
 	 if(val <= 0){
-    digitalWrite(ledGreen, HIGH);
+    digitalWrite(ledRed, HIGH);
     digitalWrite(ledYellow, LOW);
-    digitalWrite(ledRed, LOW);
+    digitalWrite(ledGreen, LOW);
     delay(5000);
-   
+    
     return 0;
   }
   
@@ -56,9 +56,13 @@ int Leds::turnOnLeds(int val){
 }
 
 // Função de porcentagem
-int Leds::percents(int val, int weight=0.28) {
+float Leds::percents(float val, float weight=0.28) {
 	var = val / weight;
 	varFormated = floor(var);
 
 	return turnOnLeds(varFormated);
 }
+
+/**
+ * @param val irá receber o valor float 
+*/

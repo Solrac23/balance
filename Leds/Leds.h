@@ -6,14 +6,14 @@
  * the percents.
  */
 
-#include <Arduino.h>
+#include "Arduino.h"
 class Leds{
   public:
-    Leds() = default; // constructor definido como padrão
+    Leds(); // uctor definido como padrão
     virtual ~Leds();
 
     // Initialize the library and data to turn on the LED
-    void begin(int &valR, int &valG, int &valY);
+    void begin(int valR, int valG, int valY);
 
     // Calculete the percents to LED and turn on the LED
     // according to the values
@@ -23,10 +23,10 @@ class Leds{
     float turnOnLeds(float val);
 
   private:
-    const int ledRed; // variable to store the red value
-    const int ledYellow; // variable to store the yellow value
-    const int ledGreen; // variable to store the green value
-    int var; // variable to store the calcule
-    int varFormated; // variable to store the formated value
-}
+    int ledRed; // variable to store the red value
+    int ledYellow; // variable to store the yellow value
+    int ledGreen; // variable to store the green value
+    float var; // variable to store the calcule
+    float varFormated; // variable to store the formated value
+};
 #endif
