@@ -3,7 +3,7 @@ ________________________________________________________________
 
 ## Arquivo Leds.h
 	Arquivo responsável pelas interfaces do Arquivo Leds.cpp
-	As interfaces seria a abstração da classe.
+	As interfacesE seria a abstração da classe.
 
 ________________________________________________________________
 ## Arquivo Leds.cpp
