@@ -25,7 +25,6 @@ ________________________________________________________________
 as portas(digitais) que irá acender as leds(semáforo).
 
 - Faz referência a novas variáveis **ledGreen, ledYellow e ledRed**
-
 para melhor identificação das variáveis.
 ________________________________________________________________
 ### Metodo Percents
