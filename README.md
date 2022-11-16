@@ -36,12 +36,12 @@ ________________________________________________________________
 
 A botija de 13kg(vazia) + 15(o gas) = 28kg;
 
-14kg --> recebido pela balança(suposição)
+14kg --> valor recebido pela balança(suposição),
 para jorgarmos esse valor para porcentagem, se faz um calculo
 
 de ***regra de 3***. 
 
-``` cpp
+```cpp
  var = val / weight;
 ```
 e para arrendondar para baixo:
